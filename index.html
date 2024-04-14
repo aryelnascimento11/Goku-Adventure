@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stars Of The Mario</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./Js/script.js" defer></script>
+    <style>
+        /* Adiciona uma margem superior para criar espaço entre o header e o banner */
+        .banner {
+            position: relative; /* Define a posição como relativa */
+            z-index: 1; /* Garante que a div banner esteja na frente da outra */
+            background-image: url('./Images/pngtree-space-wallpapers-download-free-picture-image_3175780.jpg'); /* Adiciona a imagem de fundo */
+            background-size: cover; /* Estica a imagem para cobrir toda a div */
+            background-position: center; /* Centraliza a imagem de fundo */
+            
+        }
+
+        .game-board {
+            position: relative; /* Define a posição como relativa */
+            z-index: 0; /* Garante que a div game-board esteja atrás da div banner */
+            border-radius: 1%;
+            
+        }
+
+        .button-restart {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #5d1bd8;
+            color: rgb(36, 0, 241);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none; /* Remove sublinhado padrão */
+            font-family: Arial, sans-serif; /* Especifica uma fonte */
+            font-size: 16px; /* Define o tamanho da fonte */
+            transition: background-color 0.3s; /* Adiciona uma transição suave para a mudança de cor de fundo */
+            text-decoration: none;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .button-restart:hover {
+            background-color: #000000; /* Altera a cor de fundo ao passar o mouse */
+        }
+
+        .button-restart a {
+            text-decoration: none; /* Remove a barra de baixo (underline) dos links */
+            color: white; /* Define a cor do texto do link */
+        }
+
+        .Termos {
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          
+        }
+
+    </style>
+</head>
+<body> 
+    <div class="banner">
+        <img class="image1" src="./Images/Texto_do_seu_parágrafo-removebg-preview (1).png ">
+        <button class="button-restart"><a href="file:///C:/Users/Aryel/Downloads/jooo/index.html"  class="link">Reiniciar</a></button>
+
+        <div class="game-board">
+        <img src="./Images/mario.gif" class="mario">
+        <div class="timer" id="timer">Score: 0s</div>
+        <img src="./Images/pipe.png" class="pipe">
+        <img src="./Images/Design sem nome (3)-Photoroom.png-Photoroom.png" class="clouds">     
+        <img style="height: 100%; width: 100%;" src="./Images/Imagem do WhatsApp de 2024-04-09 à(s) 17.36.52_db7304b2.jpg" alt="">
+        <img src="./Images/images-removebg-preview.png" class="foguete">
+    </div>
+    <div>
+        <h1><a href="https://docs.google.com/document/d/1m9HzeDx1GP-cWS9VtFQwo3XN76RJPrMzjO1OXorUiDY/edit" class="Termos">Termos de Uso</a></h1>
+    </div>
+</div>
+
+
+<script>
+    function updateTimer() {
+        var timerElement = document.getElementById('timer');
+        var currentTime = parseInt(timerElement.textContent.split(' ')[1]); 
+        currentTime++; // Incrementa o tempo atual
+        timerElement.textContent = 'Score: ' + currentTime + 's'; 
+    }
+
+    setInterval(updateTimer, 1000);
+</script>
+</body>
+</html>

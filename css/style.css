@@ -1,0 +1,153 @@
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.game-board {
+    width: 70%;
+    height: 550px;
+    border-bottom:20px solid #706e6e;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    position: relative; /* Define a posição como relativa */
+    z-index: 0; /* Garante que a div game-board esteja atrás da div banner */
+}
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+.jump{
+    animation: jump 500ms  ease-out;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -100px;
+    }
+    to{
+        right: 160%;
+    }
+}
+
+@keyframes jump {
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 200px;
+    }
+    50%{
+        bottom: 200px;
+    }
+    60%{
+        bottom: 200px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+
+  
+  .title {
+    color: black;
+    font-size: 24px;
+  
+  }
+  
+  .background-image {
+    position: absolute; /* Define a posição como absoluta */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Ajusta a largura */
+    height: 100%; /* Ajusta a altura */
+    z-index: -1; /* Define a imagem atrás das outras divs */
+}
+
+.clouds {
+    position: absolute;
+    width: 200px;
+    top: 50%; /* Alinha a imagem ao centro verticalmente */
+    animation: clouds-animation 10s infinite linear;
+}
+
+@keyframes clouds-animation {
+    from{
+        right: -550px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+.timer {
+    background-color: azure;
+}
+
+.image1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos padrão */
+
+
+/* Estilos para telas de até 768px (celulares) */
+@media screen and (max-width: 768px) {
+    .banner {
+        margin-top: 10px; /* Reduz a margem superior */
+    }
+}
+
+/* Estilos para telas de até 1024px (tablets) */
+@media screen and (max-width: 1024px) {
+    .banner {
+        margin-top: 15px; /* Ajusta a margem superior */
+    }
+}
+
+.timer {
+    font-size: 2em; /* Tamanho da fonte */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    align-items: center; /* Alinha os elementos ao centro horizontalmente */
+}
+
+.foguete {
+    position: absolute;
+    width: 200px;
+    top: 20%; /* Alinha a imagem ao centro verticalmente */
+    animation: foguete-animation 10s infinite linear;
+}
+
+@keyframes foguete-animation {
+    from{
+        right: -550px;
+    }
+    to{
+        right: 100%;
+    }
+}
