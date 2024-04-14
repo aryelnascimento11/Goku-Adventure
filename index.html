@@ -61,12 +61,36 @@
           
         }
 
+        /* Estilos para o botão de pular */
+        .button-jump {
+            display: block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #3cb371; /* Cor do botão */
+            color: #fff; /* Cor do texto */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            transition: background-color 0.3s; /* Transição suave para mudança de cor de fundo */
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .button-jump:hover {
+            background-color: #2e8b57; /* Cor do botão ao passar o mouse */
+        }
+
     </style>
 </head>
 <body> 
     <div class="banner">
         <img class="image1" src="./Images/Texto_do_seu_parágrafo-removebg-preview (1).png ">
         <button class="button-restart"><a href="https://stars-of-the-mario.vercel.app/"  class="link">Reiniciar</a></button>
+        <button class="button-jump" id="jumpBtn">Pular</button>
 
         <div class="game-board">
         <img src="./Images/mario.gif" class="mario">
@@ -83,6 +107,16 @@
 
 
 <script>
+    // Adiciona evento de clique ao botão de pular
+    document.getElementById('jumpBtn').addEventListener('click', function() {
+        var mario = document.querySelector('.mario'); // Seleciona o elemento do Mario
+        mario.style.bottom = '200px'; // Muda a posição vertical do Mario (faz ele pular)
+        setTimeout(function() {
+            mario.style.bottom = '0px'; // Reseta a posição vertical após um tempo
+        }, 500); // Tempo de espera para resetar a posição (em milissegundos)
+    });
+
+    // Função para atualizar o contador de tempo
     function updateTimer() {
         var timerElement = document.getElementById('timer');
         var currentTime = parseInt(timerElement.textContent.split(' ')[1]); 
