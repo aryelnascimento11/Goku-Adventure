@@ -18,8 +18,9 @@
 
 .pipe{
     position: absolute;
-    bottom: 0;
-    width: 80px;
+    top: 220px;
+    width: 250px;
+    
     animation: pipe-animation 1.5s infinite linear;
 }
 
@@ -81,13 +82,13 @@
 .clouds {
     position: absolute;
     width: 200px;
-    top: 50%; /* Alinha a imagem ao centro verticalmente */
+    top: 30%; /* Alinha a imagem ao centro verticalmente */
     animation: clouds-animation 10s infinite linear;
 }
 
 @keyframes clouds-animation {
     from{
-        right: -550px;
+        right: -400px;
     }
     to{
         right: 100%;
@@ -99,9 +100,11 @@
 }
 
 .image1 {
-    display: block;
+  
     margin-left: auto;
     margin-right: auto;
+    width: 150PX;
+    height: 150px;
 }
 
 /* Estilos padrão */
@@ -145,9 +148,14 @@ img {
 
 @keyframes foguete-animation {
     from{
-        right: -550px;
+        right: -750px;
     }
     to{
         right: 100%;
     }
+}
+
+.TITO{
+    width: 50PX;
+    height: 50px;
 }
